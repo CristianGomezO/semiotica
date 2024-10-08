@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería La Esquina</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .content-wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .grid-3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .grid-2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .grid-item {
+            width: 30%;
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .half-section {
+            width: 50%;
+        }
+
+        .half-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .contact form input, .contact form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .contact form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .grid-3, .grid-2 {
+                flex-direction: column;
+            }
+
+            .grid-item, .half-section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="section">
+        <div class="content-wrapper">
+            <h1 class="section-title">Barbería La Esquina</h1>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Características</h2>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <img src="servicios.png" alt="Servicios">
+                    <p>Servicios de la barbería</p>
+                </div>
+                <div class="grid-item">
+                    <img src="reserva.png" alt="Reserva">
+                    <p>Reserva de citas</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pago.png" alt="Pago">
+                    <p>Pago en línea</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Beneficios</h2>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <img src="ver-cortes.png" alt="Cortes más vendidos">
+                    <p>Ver cortes más vendidos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="preferencia.png" alt="Preferencias">
+                    <p>Reservar día y hora de preferencia</p>
+                </div>
+                <div class="grid-item">
+                    <img src="tarjeta.png" alt="Pago con tarjeta">
+                    <p>Pagar con tarjeta crédito o débito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Ubicación</h2>
+            <img src="mapa.png" alt="Mapa de ubicación">
+        </div>
+    </section>
+
+    <footer class="section">
+        <div class="content-wrapper grid-2">
+            <!-- Quiénes somos -->
+            <div class="half-section">
+                <h2 class="section-title">Quiénes somos</h2>
+                <div class="grid-3">
+                    <div class="grid-item">
+                        <img src="persona1.png" alt="Persona 1">
+                        <p>(Descripción)</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="persona2.png" alt="Persona 2">
+                        <p>(Descripción)</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="persona3.png" alt="Persona 3">
+                        <p>(Descripción)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <div class="half-section contact">
+                <h2 class="section-title">Contacto</h2>
+                <form>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellido" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
