@@ -24,7 +24,17 @@
         .section-title {
             text-align: center;
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
+        }
+
+        .items-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .items-despcrition {
+            font-size: 18px;
         }
 
         .section {
@@ -34,8 +44,9 @@
         }
 
         .content-wrapper {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
+            padding: 80px 0;
         }
 
         .grid-3 {
@@ -61,7 +72,7 @@
         }
 
         .half-section {
-            width: 50%;
+            width: 45%;
         }
 
         .half-section img {
@@ -100,11 +111,9 @@
             background-color: #a1a5a1;
         }
 
-        /* Social icons */
         .social-icons {
             display: flex;
             gap: 10px;
-            justify-content: center;
             margin-top: 10px;
         }
 
@@ -131,9 +140,17 @@
 
     <header>
         <div style="background-color: #bfcbbd;">
-            <div style="display: flex; align-items: center; margin: 0 20px;">
-                <img src="images/logo.jpg" alt="Servicios" style="height: 85px; margin-right: 30px;">
-                <h1>Barbería La Esquina</h1>
+            <div style="    display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 30px;">
+                <div style="display: flex; align-items: center;">
+                    <img src="images/logo.jpg" alt="Servicios" style="height: 85px; margin-right: 30px;">
+                    <h1>Barbería La Esquina</h1>
+                </div>
+                <div style="margin-right: 160px;">
+                    <a href="#" style="color: black;">Home</a>
+                </div>
             </div>
         </div>
     </header>
@@ -144,20 +161,20 @@
             <div class="grid-3">
                 <div class="grid-item">
                     <img src="images/service.png" alt="Servicios">
-                    <p>Servicios de la barbería</p>
-                    <span>Ofrecemos una variedad de servicios que incluyen cortes de cabello, afeitados y tratamientos
+                    <p class="items-title">Servicios de la barbería</p>
+                    <span class="items-despcrition">Ofrecemos una variedad de servicios que incluyen cortes de cabello, afeitados y tratamientos
                         capilares personalizados.</span>
                 </div>
                 <div class="grid-item">
                     <img src="images/barber-calendar.jpg" alt="Reserva">
-                    <p>Reserva de citas</p>
-                    <span>Facilita la planificación de tu visita a través de un sistema de reservas en línea, lo que te
+                    <p class="items-title">Reserva de citas</p>
+                    <span class="items-despcrition">Facilita la planificación de tu visita a través de un sistema de reservas en línea, lo que te
                         permite seleccionar el horario que mejor se adapte a tu disponibilidad.</span>
                 </div>
                 <div class="grid-item">
                     <img src="images/online-payment.png" alt="Pago">
-                    <p>Pago en línea</p>
-                    <span>Ofrecemos opciones de pago en línea seguras para que puedas pagar tus servicios de manera
+                    <p class="items-title">Pago en línea</p>
+                    <span class="items-despcrition">Ofrecemos opciones de pago en línea seguras para que puedas pagar tus servicios de manera
                         rápida y conveniente antes de tu cita.</span>
                 </div>
             </div>
@@ -170,20 +187,20 @@
             <div class="grid-3">
                 <div class="grid-item">
                     <img src="images/most-popular.jpg" alt="Cortes más vendidos">
-                    <p>Ver cortes más vendidos</p>
-                    <span>Ten acceso a los estilos de corte más populares, lo que te ayuda a elegir el look que
+                    <p class="items-title">Ver cortes más vendidos</p>
+                    <span class="items-despcrition">Ten acceso a los estilos de corte más populares, lo que te ayuda a elegir el look que
                         deseas.</span>
                 </div>
                 <div class="grid-item">
                     <img src="images/barber-calendar.jpg" alt="Preferencias">
-                    <p>Reservar día y hora de preferencia</p>
-                    <span>Asegúrate de obtener el horario que prefieres sin inconvenientes, lo que reduce los tiempos de
+                    <p class="items-title">Reservar día y hora de preferencia</p>
+                    <span class="items-despcrition">Asegúrate de obtener el horario que prefieres sin inconvenientes, lo que reduce los tiempos de
                         espera.</span>
                 </div>
                 <div class="grid-item">
                     <img src="images/pay-cards.png" alt="Pago con tarjeta">
-                    <p>Pagar con tarjeta crédito o débito</p>
-                    <span>
+                    <p class="items-title">Pagar con tarjeta crédito o débito</p>
+                    <span class="items-despcrition">
                         Ofrecemos la opción de pagar con tarjeta, lo que proporciona comodidad y seguridad al realizar
                         transacciones.
                     </span>
@@ -193,7 +210,7 @@
     </section>
 
     <section class="section">
-        <div style="width: 100%">
+        <div style="width: 100%; padding: 80px 0;">
             <h2 class="section-title">Ubicación</h2>
             <img src="images/map.png" alt="Mapa de ubicación" style="height: 600px; width: 100%;">
         </div>
@@ -201,26 +218,27 @@
 
     <footer class="section" style="padding-bottom: 80px;">
         <div class="content-wrapper grid-2">
-            <!-- Quiénes somos -->
             <div class="half-section">
                 <h2 class="section-title">Quiénes somos</h2>
                 <div class="grid-3">
                     <div class="grid-item">
                         <img src="images/cristian.jpg" alt="Persona 1">
+                        <p>Cristian Gómez</p>
                         <p>Estudiante de Ingeniería Informática</p>
                     </div>
                     <div class="grid-item">
                         <img src="persona2.png" alt="Persona 2">
+                        <p>Nicolas</p>
                         <p>Estudiante de Ingeniería Informática</p>
                     </div>
                     <div class="grid-item">
-                        <img src="persona3.png" alt="Persona 3">
+                        <img src="images/nicolas1.jpg" alt="Persona 3">
+                        <p>Nicolas</p>
                         <p>Estudiante de Ingeniería Informática</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Contacto -->
             <div class="half-section contact">
                 <h2 class="section-title">Contacto</h2>
                 <form class="contact-form">
@@ -238,12 +256,11 @@
             
                     <button type="submit">Enviar</button>
             
-                    <!-- Social Icons -->
                     <div class="social-icons">
-                        <a>
+                        <a href="#">
                             <img src="images/facebook.png" alt="Facebook">
                         </a>
-                        <a>
+                        <a href="#">
                             <img src="images/instagram.png" alt="Instagram">
                         </a>
                     </div>
