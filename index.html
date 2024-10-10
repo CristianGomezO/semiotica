@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbería La Esquina</title>
     <style>
         * {
@@ -66,8 +66,8 @@
         }
 
         .grid-item img {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin-bottom: 10px;
         }
 
@@ -90,7 +90,7 @@
             font-weight: bold;
         }
 
-        .contact-form input, 
+        .contact-form input,
         .contact-form textarea {
             padding: 8px;
             border: 1px solid #ccc;
@@ -123,6 +123,7 @@
         }
 
         @media (max-width: 768px) {
+
             .grid-3,
             .grid-2 {
                 flex-direction: column;
@@ -137,72 +138,97 @@
 </head>
 
 <body>
+    <header style="min-height: 100px;
+    display: flex;
+    align-items: center; justify-content: space-between; border-bottom: 1px solid black;">
+        <div style="display: flex; align-items: center; margin-left: 30px;">
+            <img src="images/logo.png" alt="Servicios" style="height: 85px; margin-right: 30px;" />
+            <h1>Barbería La Esquina</h1>
+        </div>
 
-    <header>
-        <div style="background-color: #bfcbbd;">
-            <div style="    display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 0 30px;">
-                <div style="display: flex; align-items: center;">
-                    <img src="images/logo.jpg" alt="Servicios" style="height: 85px; margin-right: 30px;">
-                    <h1>Barbería La Esquina</h1>
-                </div>
-                <div style="margin-right: 160px;">
-                    <a href="#" style="color: black;">Home</a>
-                </div>
-            </div>
+        <div style="margin-right: 160px;">
+            <a href="#" style="color: black;">Home</a>
         </div>
     </header>
 
-    <section class="section">
+    <section class="section" style="
+    background-color: #d9c66c29;
+">
         <div class="content-wrapper">
             <h2 class="section-title">Características</h2>
             <div class="grid-3">
                 <div class="grid-item">
-                    <img src="images/service.png" alt="Servicios">
+                    <img src="images/service.png" alt="Servicios" />
                     <p class="items-title">Servicios de la barbería</p>
-                    <span class="items-despcrition">Ofrecemos una variedad de servicios que incluyen cortes de cabello, afeitados y tratamientos
-                        capilares personalizados.</span>
+                    <span class="items-despcrition">Ofrecemos una variedad de servicios que incluyen cortes de
+                        cabello y tratamientos capilares personalizados.</span>
                 </div>
                 <div class="grid-item">
-                    <img src="images/barber-calendar.jpg" alt="Reserva">
+                    <img src="images/barber-calendar.png" alt="Reserva" />
                     <p class="items-title">Reserva de citas</p>
-                    <span class="items-despcrition">Facilita la planificación de tu visita a través de un sistema de reservas en línea, lo que te
-                        permite seleccionar el horario que mejor se adapte a tu disponibilidad.</span>
+                    <span class="items-despcrition">Facilita la planificación de tu visita a través de un sistema de
+                        reservas en línea, lo que te permite seleccionar el horario que
+                        mejor se adapte a tu disponibilidad.</span>
                 </div>
                 <div class="grid-item">
-                    <img src="images/online-payment.png" alt="Pago">
+                    <img src="images/online-payment.png" alt="Pago" />
                     <p class="items-title">Pago en línea</p>
-                    <span class="items-despcrition">Ofrecemos opciones de pago en línea seguras para que puedas pagar tus servicios de manera
-                        rápida y conveniente antes de tu cita.</span>
+                    <span class="items-despcrition">Ofrecemos opciones de pago en línea seguras para que puedas pagar
+                        tus servicios de manera rápida y conveniente antes de tu
+                        cita.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="
+    background-color: #6ca77533;
+">
         <div class="content-wrapper">
             <h2 class="section-title">Beneficios</h2>
-            <div class="grid-3">
+            <div class="grid-3" style="margin-bottom: 80px;">
                 <div class="grid-item">
-                    <img src="images/most-popular.jpg" alt="Cortes más vendidos">
+                    <img src="images/most-popular.png" alt="Cortes más vendidos" />
                     <p class="items-title">Ver cortes más vendidos</p>
-                    <span class="items-despcrition">Ten acceso a los estilos de corte más populares, lo que te ayuda a elegir el look que
-                        deseas.</span>
+                    <span class="items-despcrition">Ten acceso a los estilos de corte más populares, lo que te ayuda
+                        a elegir el look que deseas.</span>
                 </div>
                 <div class="grid-item">
-                    <img src="images/barber-calendar.jpg" alt="Preferencias">
+                    <img src="images/barber-calendar.png" alt="Preferencias" />
                     <p class="items-title">Reservar día y hora de preferencia</p>
-                    <span class="items-despcrition">Asegúrate de obtener el horario que prefieres sin inconvenientes, lo que reduce los tiempos de
-                        espera.</span>
+                    <span class="items-despcrition">Asegúrate de obtener el horario que prefieres sin inconvenientes,
+                        lo que reduce los tiempos de espera.</span>
                 </div>
                 <div class="grid-item">
-                    <img src="images/pay-cards.png" alt="Pago con tarjeta">
+                    <img src="images/pay-online.png" alt="Pago con tarjeta" />
                     <p class="items-title">Pagar con tarjeta crédito o débito</p>
                     <span class="items-despcrition">
-                        Ofrecemos la opción de pagar con tarjeta, lo que proporciona comodidad y seguridad al realizar
-                        transacciones.
+                        Ofrecemos la opción de pagar con tarjeta, lo que proporciona
+                        comodidad y seguridad al realizar transacciones.
+                    </span>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <img src="images/down-time.png" alt="Cortes más vendidos" />
+                    <p class="items-title">Reducción de Tiempos de Espera</p>
+                    <span class="items-despcrition">Los clientes no tendrán que esperar en la barbería, ya que podrán
+                        llegar en el horario específico de su cita.</span>
+                </div>
+                <div class="grid-item">
+                    <img src="images/best-organization.png" alt="Preferencias" />
+                    <p class="items-title">Mejora de la Organización</p>
+                    <span class="items-despcrition">El sistema automatizado evita confusiones y garantiza que los
+                        clientes sean atendidos en el orden correcto.</span>
+                </div>
+                <div class="grid-item">
+                    <img src="images/best-atention.png" alt="Pago con tarjeta" />
+                    <p class="items-title">
+                        Aumento en la Capacidad de Atender Clientes
+                    </p>
+                    <span class="items-despcrition">
+                        Al reducir los tiempos de espera y automatizar turnos, la barbería
+                        podrá atender a un mayor número de clientes a lo largo del día.
                     </span>
                 </div>
             </div>
@@ -210,65 +236,71 @@
     </section>
 
     <section class="section">
-        <div style="width: 100%; padding: 80px 0;">
-            <h2 class="section-title">Ubicación</h2>
-            <img src="images/map.png" alt="Mapa de ubicación" style="height: 600px; width: 100%;">
-        </div>
+        <img src="images/map.png" alt="Mapa de ubicación" style="height: 700px; width: 100%;" />
     </section>
 
-    <footer class="section" style="padding-bottom: 80px;">
+    <footer class="section" style="
+    background-color: #bfcbbd5c;
+">
         <div class="content-wrapper grid-2">
             <div class="half-section">
                 <h2 class="section-title">Quiénes somos</h2>
                 <div class="grid-3">
                     <div class="grid-item">
-                        <img src="images/cristian.jpg" alt="Persona 1">
-                        <p>Cristian Gómez</p>
-                        <p>Estudiante de Ingeniería Informática</p>
+                        <img src="images/cristian.jpg" alt="Persona 1" />
+                        <p class="items-title">Cristian Gómez</p>
+                        <p class="items-despcrition">
+                            Estudiante de Ingeniería Informática
+                        </p>
                     </div>
                     <div class="grid-item">
-                        <img src="persona2.png" alt="Persona 2">
-                        <p>Nicolas</p>
-                        <p>Estudiante de Ingeniería Informática</p>
+                        <img src="persona2.png" alt="Persona 2" />
+                        <p class="items-title">Nicolas Álzate</p>
+                        <p class="items-despcrition">
+                            Estudiante de Ingeniería Informática
+                        </p>
                     </div>
                     <div class="grid-item">
-                        <img src="images/nicolas1.jpg" alt="Persona 3">
-                        <p>Nicolas</p>
-                        <p>Estudiante de Ingeniería Informática</p>
+                        <img src="images/nicolas1.png" alt="Persona 3" />
+                        <p class="items-title">Nicolas Jaramillo</p>
+                        <p class="items-despcrition">
+                            Estudiante de Ingeniería Informática
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="half-section contact">
-                <h2 class="section-title">Contacto</h2>
-                <form class="contact-form">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-            
-                    <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname" name="lastname" required>
-            
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-            
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" required></textarea>
-            
-                    <button type="submit">Enviar</button>
-            
-                    <div class="social-icons">
-                        <a href="#">
-                            <img src="images/facebook.png" alt="Facebook">
-                        </a>
-                        <a href="#">
-                            <img src="images/instagram.png" alt="Instagram">
-                        </a>
-                    </div>
-                </form>
+            <div class="half-section contact" style="border: 2px solid #bfcbbd;">
+                <div style="margin: 30px;">
+                    <h2 class="section-title">Contacto</h2>
+                    <form class="contact-form">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="lastname">Apellido</label>
+                        <input type="text" id="lastname" name="lastname" required />
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Enviar</button>
+
+                        <div class="social-icons">
+                            <a href="#">
+                                <img src="images/facebook.png" alt="Facebook" />
+                            </a>
+                            <a href="#">
+                                <img src="images/instagram.png" alt="Instagram" />
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
