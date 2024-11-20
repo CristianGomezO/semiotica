@@ -1,14 +1,3 @@
-/* Estilo general del cuerpo */
-
-
-h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: black; 
-    text-transform: uppercase; 
-}
-
-/* Formulario de Iniciar Sesion */
 main {
     flex: 1;
     display: flex;
@@ -26,7 +15,6 @@ form {
     max-width: 800px;
 }
 
-/* Estilos para el formulario de Iniciar Sesión */
 .form-fields {
     display: flex;
     flex-direction: column;
@@ -43,14 +31,10 @@ input[type="email"], input[type="password"] {
     font-size: 1rem;
 }
 
-
-
-/* Estilos adicionales para el botón */
 .btn {
     padding: 10px 20px; 
 }
 
-/* Estilo para el texto de "Olvidé mi contraseña" */
 .forgot-password {
     color: red; 
     font-size: 0.9rem; 

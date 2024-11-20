@@ -1,0 +1,120 @@
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.perfil-image-selection {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.perfil-image-selection label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.perfil-image-selection label input[type="radio"] {
+    display: none;
+}
+
+.perfil-image-selection label img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, border 0.3s;
+    border: 2px solid transparent;
+}
+
+.perfil-image-selection label input[type="radio"]:checked + img {
+    border-color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario de registro */
+.form-fields {
+    display: flex;
+    gap: 20px; 
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: white;
+    padding: 20px; /* Ajustar padding para igualar el encabezado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    border-top: 2px solid #ccc;
+    margin-top: auto;
+    height: 100px; /* Fijar altura del pie de página */
+}
+
+.footer-logo {
+    width: 70px; /* Tamaño del logo en el pie de página */
+    height: auto;
+}
+
+.center-footer, .right-footer {
+    text-align: center;
+}
+
+.center-footer h2, .right-footer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.center-footer p, .right-footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+
+.btn {
+    padding: 10px 20px; /* Ajustar tamaño del boton */
+}
