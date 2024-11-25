@@ -1,0 +1,24 @@
+.classification-stars label {
+    color: grey;
+}
+
+.classification-stars input { 
+    display: none;
+}
+
+.classification-stars {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.classification-stars label:hover {
+    color:orange;
+}
+
+.classification-stars label:hover ~ label {
+    color:orange;
+}
+
+.classification-stars input[type = "radio"]:checked ~ label{
+    color:orange;
+}
