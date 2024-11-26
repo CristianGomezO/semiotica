@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    let ageCalculate = 0;
+    const path = document.location.pathname;
+    const currentHTMLFile = path.substring(path.lastIndexOf('/') + 1);
+
     $.validator.addMethod("birthDateValidation", function(value, element) {
         const birthDate = new Date(value);
         return birthDate < new Date();
@@ -105,9 +107,11 @@ $(document).ready(function() {
         $('#registrationForm .is-valid').removeClass('is-valid');
     });
 
-    $('#firstName, #lastName, #birthDate').on('change input', function() {
-        updateUsernameField();
-    });
+    if (currentHTMLFile === "sing-up.html") {
+        $('#firstName, #lastName, #birthDate').on('change input', function() {
+            updateUsernameField();
+        });
+    }
 
     function updateUsernameField() {
         const name = $('#firstName').val().trim()
@@ -134,6 +138,10 @@ $(document).ready(function() {
           }, {});
         const finalData = { ...formData, perfilImageChecked };
         sessionStorage.setItem("user", JSON.stringify(finalData));
-        window.location.href = "login.html";
+        if (currentHTMLFile == "profile.html") {
+            location.reload();
+        } else {
+            window.location.href = "login.html";
+        }
     }
 });

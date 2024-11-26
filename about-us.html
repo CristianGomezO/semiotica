@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Acerca de nosotros</title>
+    <!-- Meta Tags Requeridos -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/landing.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/about-us.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img id="userImage" alt="Foto de perfil">
+            <h3 id="usernameSidebar"></h3>
+        </div>
+        <nav>
+            <a href="services.html">Servicios</a>
+            <a href="licenses.html">Licencias</a>
+            <a href="profile.html">Perfil</a>
+            <a href="settings.html">Configuración</a>
+            <a href="docs-and-help.html">Ayudas y documentación</a>
+            <a href="about-us.html" class="active">Acerca de nosotros</a>
+        </nav>
+        <div class="logout">
+            <a href="login.html" onclick="onLogout()">Cerrar sesión</a>
+        </div>
+    </div>
+
+    <main class="sidebar-container">
+        <header>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Servicios" class="logo-image" />
+            </div>
+        </header>
+
+        <section class="section-main">
+            <div class="content-wrapper grid-2">
+                <div class="half-section">
+                    <div class="aux-contact">
+                        <div class="presentation-container">
+                            <h1>Bienvenido a Barbería La Esquina</h1>
+                            <p>
+                                ¡Tu experiencia comienza aquí! Nuestra plataforma está diseñada para hacer tu visita más
+                                cómoda y rápida.
+                            </p>
+                            <ul>
+                                <li><strong>Reserva fácil y rápida:</strong> Agenda tu cita en línea, elige tu barbero
+                                    favorito y selecciona el horario que más te convenga.</li>
+                                <li><strong>Menos tiempo de espera:</strong> Olvídate de las largas filas, con nuestro
+                                    sistema de turnos automatizado todo está listo para ti al llegar.</li>
+                                <li><strong>Pagos seguros y convenientes:</strong> Paga tu cita de manera anticipada con
+                                    nuestra integración segura de Stripe.</li>
+                            </ul>
+                            <p>
+                                Nos importa tu tiempo y comodidad, por eso nos aseguramos de ofrecerte un servicio
+                                moderno y eficiente.
+                            </p>
+                            <p class="closing-text">
+                                ¡Gracias por elegir Barbería La Esquina, donde el estilo es nuestra especialidad!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section">
+                    <h2 class="section-title">Quiénes somos</h2>
+                    <div class="grid-3">
+                        <div class="grid-item">
+                            <img src="assets/images/cristian.jpg" alt="Persona 1" />
+                            <p class="items-title">Cristian Gómez</p>
+                            <p class="items-despcrition">Desarrollador Fullstack</p>
+                            <a href="https://www.linkedin.com/in/cristian-g%C3%B3mez-352506195/" target="_blank">Red
+                                social</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="assets/images/nicolas2.jpg" alt="Persona 2" />
+                            <p class="items-title">Nicolas Álzate</p>
+                            <p class="items-despcrition">Diseñador UX</p>
+                            <a href="#" target="_blank">Red social</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="assets/images/nicolas1.png" alt="Persona 3" />
+                            <p class="items-title">Nicolas Jaramillo</p>
+                            <p class="items-despcrition">Desarrollador Backend</p>
+                            <a href="#" target="_blank">Red social</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <footer>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+            </div>
+            <div class="middle-footer">
+                <span class="title">Dirección</span>
+                <span>Cra. 55 #27a-42 Bello, Cabañas</span>
+            </div>
+            <div class="middle-footer">
+                <span class="title">Contáctenos</span>
+                <span>laesquina@gmail.com</span>
+                <span>+57 3001234567</span>
+            </div>
+            <div class="right-footer">
+                <span class="title">Redes sociales</span>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="assets/images/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/instagram.png" alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

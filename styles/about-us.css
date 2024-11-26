@@ -1,0 +1,42 @@
+.presentation-container {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.presentation-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.presentation-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.presentation-container ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.presentation-container .closing-text {
+    font-size: 18px;
+    font-weight: bold;
+}

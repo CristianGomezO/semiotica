@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="es" theme="light">
+<html lang="es">
 
 <head>
-    <title>Servicios de Barbería</title>
+    <title>Licencias</title>
+    <!-- Meta Tags Requeridos -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/landing.css" />
@@ -13,330 +16,345 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="Servicios" class="logo-image" />
+    <div class="sidebar">
+        <div class="profile">
+            <img id="userImage" alt="Foto de perfil">
+            <h3 id="usernameSidebar"></h3>
         </div>
-        <h1>Manejo de licencias</h1>
-        <nav class="links-header-menu">
-            <a href="login.html">Iniciar sesión</a>
-            <a href="index.html">Inicio</a>
+        <nav>
+            <a href="services.html">Servicios</a>
+            <a href="licenses.html" class="active">Licencias</a>
+            <a href="profile.html">Perfil</a>
+            <a href="settings.html">Configuración</a>
+            <a href="docs-and-help.html">Ayudas y documentación</a>
+            <a href="about-us.html">Acerca de nosotros</a>
         </nav>
-    </header>
+        <div class="logout">
+            <a href="login.html" onclick="onLogout()">Cerrar sesión</a>
+        </div>
+    </div>
 
-    <main>
-        <div class="container py-3">
-            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="services">
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-success">
-                        <div class="card-header py-3 text-white bg-success border-success">
-                            <h4 class="my-0 fw-normal">Corte Básico</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$10<small
-                                    class="text-muted fw-light">/servicio</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Corte clásico</li>
-                                <li>Sin lavado</li>
-                                <li>Duración: 30 min</li>
-                                <li>Acceso al centro de ayuda</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-success"
-                                onclick="addPlanToTable('basic', 10, 1)">Agregar</button>
-                            <input type="number" class="form-control mt-2" placeholder="Cantidad" name="basicQty"
-                                id="basicQty">
-                            <p class="classification-stars">
-                                <input id="radioStar11" type="radio" name="stars1" value="5">
-                                <label for="radioStar11">★</label>
-                                <input id="radioStar12" type="radio" name="stars1" value="4">
-                                <label for="radioStar12">★</label>
-                                <input id="radioStar13" type="radio" name="stars1" value="3">
-                                <label for="radioStar13">★</label>
-                                <input id="radioStar14" type="radio" name="stars1" value="2">
-                                <label for="radioStar14">★</label>
-                                <input id="radioStar15" type="radio" name="stars1" value="1">
-                                <label for="radioStar15">★</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-success">
-                        <div class="card-header py-3 text-white bg-success border-success">
-                            <h4 class="my-0 fw-normal">Corte Premium</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$20<small
-                                    class="text-muted fw-light">/servicio</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Corte con lavado</li>
-                                <li>Producto de estilizado incluido</li>
-                                <li>Duración: 45 min</li>
-                                <li>Descuento en productos</li>
-
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-success"
-                                onclick="addPlanToTable('premium', 20, 2)">Agregar</button>
-                            <input type="number" class="form-control mt-2" placeholder="Cantidad" name="premiumQty"
-                                id="premiumQty">
-                            <p class="classification-stars">
-                                <input id="radioStar21" type="radio" name="stars2" value="5">
-                                <label for="radioStar21">★</label>
-                                <input id="radioStar22" type="radio" name="stars2" value="4">
-                                <label for="radioStar22">★</label>
-                                <input id="radioStar23" type="radio" name="stars2" value="3">
-                                <label for="radioStar23">★</label>
-                                <input id="radioStar24" type="radio" name="stars2" value="2">
-                                <label for="radioStar24">★</label>
-                                <input id="radioStar25" type="radio" name="stars2" value="1">
-                                <label for="radioStar25">★</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm border-success">
-                        <div class="card-header py-3 text-white bg-success border-success">
-                            <h4 class="my-0 fw-normal">Paquete Completo</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$40<small
-                                    class="text-muted fw-light">/servicio</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Corte y afeitado completo</li>
-                                <li>Lavado y masaje capilar</li>
-                                <li>Duración: 60 min</li>
-                                <li>Bebida incluida</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-success"
-                                onclick="addPlanToTable('complete', 40, 3)">Agregar</button>
-                            <input type="number" class="form-control mt-2" placeholder="Cantidad" name="completeQty"
-                                id="completeQty">
-                            <p class="classification-stars">
-                                <input id="radioStar31" type="radio" name="stars3" value="5">
-                                <label for="radioStar31">★</label>
-                                <input id="radioStar32" type="radio" name="stars3" value="4">
-                                <label for="radioStar32">★</label>
-                                <input id="radioStar33" type="radio" name="stars3" value="3">
-                                <label for="radioStar33">★</label>
-                                <input id="radioStar34" type="radio" name="stars3" value="2">
-                                <label for="radioStar34">★</label>
-                                <input id="radioStar35" type="radio" name="stars3" value="1">
-                                <label for="radioStar35">★</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <main class="sidebar-container">
+        <header>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Servicios" class="logo-image" />
             </div>
+        </header>
 
-            <h2 class="display-6 text-center mb-4 mt-5 fw-bold">Comparación de Servicios</h2>
-
-            <div class="table-responsive">
-                <table class="table text-center table-striped">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Corte Básico</th>
-                            <th>Corte Premium</th>
-                            <th>Paquete Completo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="text-start">Duración</th>
-                            <td>30 min</td>
-                            <td>45 min</td>
-                            <td>60 min</td>
-                        </tr>
-                        <tr>
-                            <th class="text-start">Incluye Lavado</th>
-                            <td>No</td>
-                            <td>Sí</td>
-                            <td>Sí</td>
-                        </tr>
-                        <tr>
-                            <th class="text-start">Estilizado</th>
-                            <td>No</td>
-                            <td>Sí</td>
-                            <td>Sí</td>
-                        </tr>
-                        <tr>
-                            <th class="text-start">Bebida incluida</th>
-                            <td>No</td>
-                            <td>No</td>
-                            <td>Sí</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2 class="display-6 text-center mb-4 mt-5 fw-bold">Servicios Seleccionados</h2>
-            <div class="table-responsive">
-                <table class="table text-center table-striped" id="servicesTable">
-                    <thead>
-                        <tr>
-                            <th>Servicio</th>
-                            <th>Valor servicio</th>
-                            <th>Cantidad</th>
-                            <th>Total por Servicio</th>
-                            <th>Calificación</th>
-                        </tr>
-                    </thead>
-                    <tbody id="servicesTableBody">
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="d-flex mt-5 d-flex justify-content-around">
-                <div class="d-flex">
-                    <p class="fw-bold">Subtotal: </p>
-                    <p id="subTotal"></p>
-                </div>
-
-                <div class="d-flex">
-                    <p class="fw-bold">IVA: </p>
-                    <p id="iva"></p>
-                </div>
-
-                <div class="d-flex">
-                    <p class="fw-bold">Total: </p>
-                    <p id="total"></p>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-success" id="payServices" type="button" data-bs-toggle="modal"
-                    data-bs-target="#payModal" hidden>Pagar</button>
-
-                <div class="modal fade" id="payModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Pagar servicios</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+        <section class="section-main">
+            <div class="container py-3">
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="services">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-success">
+                            <div class="card-header py-3 text-white bg-success border-success">
+                                <h4 class="my-0 fw-normal">Corte Básico</h4>
                             </div>
-                            <div class="modal-body">
-                                <div id="checkoutFormContainer">
-                                    <form id="checkoutForm">
-                                        <div class="row g-3">
-                                            <div class="col-md-6">
-                                                <label for="installments" class="form-label">Número de Cuotas</label>
-                                                <input type="number" class="form-control" id="installments"
-                                                    name="installments" placeholder="Máximo 10"
-                                                    onchange="_onChangeInstallments(this.value)">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="installmentValue" class="form-label">Valor Cuota</label>
-                                                <input type="text" class="form-control" id="installmentValue"
-                                                    name="installmentValue" readonly>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="fullName" class="form-label">Nombre Completo</label>
-                                                <input type="text" class="form-control" id="fullName" name="fullName"
-                                                    placeholder="Ingrese su nombre">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="creditCardNumber" class="form-label">Número de
-                                                    Tarjeta</label>
-                                                <input type="text" class="form-control" id="creditCardNumber"
-                                                    name="creditCardNumber" maxlength="19"
-                                                    placeholder="XXXX-XXXX-XXXX-XXXX">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="securityCode" class="form-label">Código de Seguridad</label>
-                                                <input type="text" class="form-control" id="securityCode"
-                                                    name="securityCode" maxlength="4" placeholder="4 dígitos">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="expirationMonth" class="form-label">Mes de
-                                                    Expiración</label>
-                                                <select class="form-select" id="expirationMonth" name="expirationMonth">
-                                                    <option value="">Mes</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                    <option value="12">12</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="expirationYear" class="form-label">Año de Expiración</label>
-                                                <select class="form-select" id="expirationYear" name="expirationYear">
-                                                    <option value="">Año</option>
-                                                    <option value="2025">2025</option>
-                                                    <option value="2026">2026</option>
-                                                    <option value="2027">2027</option>
-                                                    <option value="2028">2028</option>
-                                                    <option value="2029">2029</option>
-                                                    <option value="2030">2030</option>
-                                                    <option value="2031">2031</option>
-                                                    <option value="2032">2032</option>
-                                                    <option value="2033">2033</option>
-                                                    <option value="2034">2034</option>
-                                                    <option value="2035">2035</option>
-                                                    <option value="2036">2036</option>
-                                                    <option value="2037">2037</option>
-                                                    <option value="2038">2038</option>
-                                                    <option value="2039">2039</option>
-                                                    <option value="2040">2040</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="address" class="form-label">Dirección</label>
-                                                <input type="text" class="form-control" id="address" name="address"
-                                                    placeholder="Ingrese su dirección">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="city" class="form-label">Ciudad</label>
-                                                <input type="text" class="form-control" id="city" name="city"
-                                                    placeholder="Ingrese su ciudad">
-                                            </div>
-                                            <div class="modal-footer border-top-0">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Cerrar</button>
-                                                <button type="submit" class="btn btn-success">Pagar</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10<small
+                                        class="text-muted fw-light">/servicio</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Corte clásico</li>
+                                    <li>Sin lavado</li>
+                                    <li>Duración: 30 min</li>
+                                    <li>Acceso al centro de ayuda</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-success"
+                                    onclick="addPlanToTable('basic', 10, 1)">Agregar</button>
+                                <input type="number" class="form-control mt-2" placeholder="Cantidad" name="basicQty"
+                                    id="basicQty">
+                                <p class="classification-stars">
+                                    <input id="radioStar11" type="radio" name="stars1" value="5">
+                                    <label for="radioStar11">★</label>
+                                    <input id="radioStar12" type="radio" name="stars1" value="4">
+                                    <label for="radioStar12">★</label>
+                                    <input id="radioStar13" type="radio" name="stars1" value="3">
+                                    <label for="radioStar13">★</label>
+                                    <input id="radioStar14" type="radio" name="stars1" value="2">
+                                    <label for="radioStar14">★</label>
+                                    <input id="radioStar15" type="radio" name="stars1" value="1">
+                                    <label for="radioStar15">★</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-success">
+                            <div class="card-header py-3 text-white bg-success border-success">
+                                <h4 class="my-0 fw-normal">Corte Premium</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$20<small
+                                        class="text-muted fw-light">/servicio</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Corte con lavado</li>
+                                    <li>Producto de estilizado incluido</li>
+                                    <li>Duración: 45 min</li>
+                                    <li>Descuento en productos</li>
+    
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-success"
+                                    onclick="addPlanToTable('premium', 20, 2)">Agregar</button>
+                                <input type="number" class="form-control mt-2" placeholder="Cantidad" name="premiumQty"
+                                    id="premiumQty">
+                                <p class="classification-stars">
+                                    <input id="radioStar21" type="radio" name="stars2" value="5">
+                                    <label for="radioStar21">★</label>
+                                    <input id="radioStar22" type="radio" name="stars2" value="4">
+                                    <label for="radioStar22">★</label>
+                                    <input id="radioStar23" type="radio" name="stars2" value="3">
+                                    <label for="radioStar23">★</label>
+                                    <input id="radioStar24" type="radio" name="stars2" value="2">
+                                    <label for="radioStar24">★</label>
+                                    <input id="radioStar25" type="radio" name="stars2" value="1">
+                                    <label for="radioStar25">★</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-success">
+                            <div class="card-header py-3 text-white bg-success border-success">
+                                <h4 class="my-0 fw-normal">Paquete Completo</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$40<small
+                                        class="text-muted fw-light">/servicio</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Corte y afeitado completo</li>
+                                    <li>Lavado y masaje capilar</li>
+                                    <li>Duración: 60 min</li>
+                                    <li>Bebida incluida</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-success"
+                                    onclick="addPlanToTable('complete', 40, 3)">Agregar</button>
+                                <input type="number" class="form-control mt-2" placeholder="Cantidad" name="completeQty"
+                                    id="completeQty">
+                                <p class="classification-stars">
+                                    <input id="radioStar31" type="radio" name="stars3" value="5">
+                                    <label for="radioStar31">★</label>
+                                    <input id="radioStar32" type="radio" name="stars3" value="4">
+                                    <label for="radioStar32">★</label>
+                                    <input id="radioStar33" type="radio" name="stars3" value="3">
+                                    <label for="radioStar33">★</label>
+                                    <input id="radioStar34" type="radio" name="stars3" value="2">
+                                    <label for="radioStar34">★</label>
+                                    <input id="radioStar35" type="radio" name="stars3" value="1">
+                                    <label for="radioStar35">★</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2 class="display-6 text-center mb-4 mt-5 fw-bold">Comparación de Servicios</h2>
+    
+                <div class="table-responsive">
+                    <table class="table text-center table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Corte Básico</th>
+                                <th>Corte Premium</th>
+                                <th>Paquete Completo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-start">Duración</th>
+                                <td>30 min</td>
+                                <td>45 min</td>
+                                <td>60 min</td>
+                            </tr>
+                            <tr>
+                                <th class="text-start">Incluye Lavado</th>
+                                <td>No</td>
+                                <td>Sí</td>
+                                <td>Sí</td>
+                            </tr>
+                            <tr>
+                                <th class="text-start">Estilizado</th>
+                                <td>No</td>
+                                <td>Sí</td>
+                                <td>Sí</td>
+                            </tr>
+                            <tr>
+                                <th class="text-start">Bebida incluida</th>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>Sí</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h2 class="display-6 text-center mb-4 mt-5 fw-bold">Servicios Seleccionados</h2>
+                <div class="table-responsive">
+                    <table class="table text-center table-striped" id="servicesTable">
+                        <thead>
+                            <tr>
+                                <th>Servicio</th>
+                                <th>Valor servicio</th>
+                                <th>Cantidad</th>
+                                <th>Total por Servicio</th>
+                                <th>Calificación</th>
+                            </tr>
+                        </thead>
+                        <tbody id="servicesTableBody">
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="d-flex mt-5 d-flex justify-content-around">
+                    <div class="d-flex">
+                        <p class="fw-bold">Subtotal: </p>
+                        <p id="subTotal"></p>
+                    </div>
+    
+                    <div class="d-flex">
+                        <p class="fw-bold">IVA: </p>
+                        <p id="iva"></p>
+                    </div>
+    
+                    <div class="d-flex">
+                        <p class="fw-bold">Total: </p>
+                        <p id="total"></p>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center mt-5">
+                    <button class="btn btn-success" id="payServices" type="button" data-bs-toggle="modal"
+                        data-bs-target="#payModal" hidden>Pagar</button>
+    
+                    <div class="modal fade" id="payModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Pagar servicios</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div id="paymentSummary" hidden>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <strong>Fecha:</strong> <span id="currentDate"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>Hora:</strong> <span id="currentTime"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>TOTAL de la compra:</strong> <span id="totalAmount"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>Cantidad de cuotas:</strong> <span id="installmentsCount"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>Valor de cada cuota:</strong> <span id="installmentValueText"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>Últimos 4 dígitos de la tarjeta:</strong> <span
-                                                id="cardLastDigits"></span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <strong>Franquicia de la tarjeta:</strong>
-                                            <img id="cardBrandImage" src="" alt="Franquicia tarjeta" width="50">
-                                        </li>
-                                    </ul>
-                                    <div class="modal-footer border-top-0">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
+                                <div class="modal-body">
+                                    <div id="checkoutFormContainer">
+                                        <form id="checkoutForm">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="installments" class="form-label">Número de Cuotas</label>
+                                                    <input type="number" class="form-control" id="installments"
+                                                        name="installments" placeholder="Máximo 10"
+                                                        onchange="_onChangeInstallments(this.value)">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="installmentValue" class="form-label">Valor Cuota</label>
+                                                    <input type="text" class="form-control" id="installmentValue"
+                                                        name="installmentValue" readonly>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="fullName" class="form-label">Nombre Completo</label>
+                                                    <input type="text" class="form-control" id="fullName" name="fullName"
+                                                        placeholder="Ingrese su nombre">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="creditCardNumber" class="form-label">Número de
+                                                        Tarjeta</label>
+                                                    <input type="text" class="form-control" id="creditCardNumber"
+                                                        name="creditCardNumber" maxlength="19"
+                                                        placeholder="XXXX-XXXX-XXXX-XXXX">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="securityCode" class="form-label">Código de Seguridad</label>
+                                                    <input type="text" class="form-control" id="securityCode"
+                                                        name="securityCode" maxlength="4" placeholder="4 dígitos">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="expirationMonth" class="form-label">Mes de
+                                                        Expiración</label>
+                                                    <select class="form-select" id="expirationMonth" name="expirationMonth">
+                                                        <option value="">Mes</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="expirationYear" class="form-label">Año de Expiración</label>
+                                                    <select class="form-select" id="expirationYear" name="expirationYear">
+                                                        <option value="">Año</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2026">2026</option>
+                                                        <option value="2027">2027</option>
+                                                        <option value="2028">2028</option>
+                                                        <option value="2029">2029</option>
+                                                        <option value="2030">2030</option>
+                                                        <option value="2031">2031</option>
+                                                        <option value="2032">2032</option>
+                                                        <option value="2033">2033</option>
+                                                        <option value="2034">2034</option>
+                                                        <option value="2035">2035</option>
+                                                        <option value="2036">2036</option>
+                                                        <option value="2037">2037</option>
+                                                        <option value="2038">2038</option>
+                                                        <option value="2039">2039</option>
+                                                        <option value="2040">2040</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Dirección</label>
+                                                    <input type="text" class="form-control" id="address" name="address"
+                                                        placeholder="Ingrese su dirección">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="city" class="form-label">Ciudad</label>
+                                                    <input type="text" class="form-control" id="city" name="city"
+                                                        placeholder="Ingrese su ciudad">
+                                                </div>
+                                                <div class="modal-footer border-top-0">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-success">Pagar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="paymentSummary" hidden>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <strong>Fecha:</strong> <span id="currentDate"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>Hora:</strong> <span id="currentTime"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>TOTAL de la compra:</strong> <span id="totalAmount"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>Cantidad de cuotas:</strong> <span id="installmentsCount"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>Valor de cada cuota:</strong> <span id="installmentValueText"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>Últimos 4 dígitos de la tarjeta:</strong> <span
+                                                    id="cardLastDigits"></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <strong>Franquicia de la tarjeta:</strong>
+                                                <img id="cardBrandImage" src="" alt="Franquicia tarjeta" width="50">
+                                            </li>
+                                        </ul>
+                                        <div class="modal-footer border-top-0">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -344,37 +362,37 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <footer>
-        <div class="logo-container">
-            <img src="assets/images/logo.png" alt="Logo" class="logo-image">
-        </div>
-        <div class="middle-footer">
-            <span class="title">Dirección</span>
-            <span>Cra. 55 #27a-42 Bello, Cabañas</span>
-        </div>
-        <div class="middle-footer">
-            <span class="title">Contáctenos</span>
-            <span>laesquina@gmail.com</span>
-            <span>+57 3001234567</span>
-        </div>
-        <div class="right-footer">
-            <span class="title">Redes sociales</span>
-            <div class="social-icons">
-                <a href="#">
-                    <img src="assets/images/facebook.png" alt="Facebook" />
-                </a>
-                <a href="#">
-                    <img src="assets/images/instagram.png" alt="Instagram" />
-                </a>
+        <footer>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Logo" class="logo-image">
             </div>
-        </div>
-    </footer>
-
+            <div class="middle-footer">
+                <span class="title">Dirección</span>
+                <span>Cra. 55 #27a-42 Bello, Cabañas</span>
+            </div>
+            <div class="middle-footer">
+                <span class="title">Contáctenos</span>
+                <span>laesquina@gmail.com</span>
+                <span>+57 3001234567</span>
+            </div>
+            <div class="right-footer">
+                <span class="title">Redes sociales</span>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="assets/images/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/instagram.png" alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-validate.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/servicesManagment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

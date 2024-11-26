@@ -1,0 +1,47 @@
+.help-section {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.help-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.help-topics {
+    margin-top: 20px;
+}
+
+.help-item {
+    margin-bottom: 20px;
+}
+
+.help-item h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.help-item p {
+    line-height: 1.6;
+}
+
+.help-item ul,
+.help-item ol {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.help-item ul li,
+.help-item ol li {
+    margin-bottom: 8px;
+}

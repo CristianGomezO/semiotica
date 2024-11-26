@@ -1,6 +1,6 @@
 
 
-main {
+main:not(.sidebar-container) {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -49,7 +49,6 @@ form {
     transform: scale(1.1);
 }
 
-/* Estilos para el formulario de registro */
 .form-fields {
     display: flex;
     gap: 20px; 
@@ -71,21 +70,20 @@ input[type="text"], input[type="email"], input[type="password"] {
     font-size: 1rem;
 }
 
-/* Estilo del pie de página */
 footer {
     background-color: white;
-    padding: 20px; /* Ajustar padding para igualar el encabezado */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #333;
-    border-top: 2px solid #ccc;
+    border-top: 1px black solid;
     margin-top: auto;
-    height: 100px; /* Fijar altura del pie de página */
+    height: 100px;
 }
 
 .footer-logo {
-    width: 70px; /* Tamaño del logo en el pie de página */
+    width: 70px;
     height: auto;
 }
 
@@ -115,5 +113,5 @@ footer {
 }
 
 .btn {
-    padding: 10px 20px; /* Ajustar tamaño del boton */
+    padding: 10px 20px;
 }

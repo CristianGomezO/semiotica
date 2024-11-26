@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Servicios</title>
+    <title>Perfil</title>
     <!-- Meta Tags Requeridos -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,6 +12,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/landing.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
 </head>
 
 <body>
@@ -21,9 +23,9 @@
             <h3 id="usernameSidebar"></h3>
         </div>
         <nav>
-            <a href="services.html" class="active">Servicios</a>
+            <a href="services.html">Servicios</a>
             <a href="licenses.html">Licencias</a>
-            <a href="profile.html">Perfil</a>
+            <a href="profile.html" class="active">Perfil</a>
             <a href="settings.html">Configuración</a>
             <a href="docs-and-help.html">Ayudas y documentación</a>
             <a href="about-us.html">Acerca de nosotros</a>
@@ -41,6 +43,43 @@
         </header>
 
         <section class="section-main">
+            <div class="aux-container">
+                <form id="registrationForm">
+                    <div class="perfil-image-selection">
+                        <label>
+                            <input type="radio" name="perfilImage" value="1">
+                            <img src="assets/images/user-1.png" alt="Imagen 1">
+                        </label>
+                        <label>
+                            <input type="radio" name="perfilImage" value="2">
+                            <img src="assets/images/user-2.png" alt="Imagen 2">
+                        </label>
+                        <label>
+                            <input type="radio" name="perfilImage" value="3">
+                            <img src="assets/images/user-3.png" alt="Imagen 3">
+                        </label>
+                        <label>
+                            <input type="radio" name="perfilImage" value="4">
+                            <img src="assets/images/user-4.png" alt="Imagen 4">
+                        </label>
+                    </div>
+                    <div class="form-fields">
+                        <div class="left">
+                            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Nombres" readonly>
+                            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Apellidos" readonly>
+                            <input type="date" name="birthDate" id="birthDate" class="form-control" placeholder="Fecha de nacimiento" readonly>
+                            <input type="text" name="age" id="age" class="form-control" placeholder="Edad" readonly>
+                        </div>
+                        <div class="right">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Correo" readonly>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Usuario" readonly>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña">
+                            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirmar Contraseña">
+                        </div>
+                    </div>
+                    <button type="submit" id="submitForm" class="btn btn-primary mt-3">Actualizar</button>
+                </form>
+            </div>
         </section>
 
         <footer>
@@ -70,7 +109,10 @@
         </footer>
     </main>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-validate.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/signUp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

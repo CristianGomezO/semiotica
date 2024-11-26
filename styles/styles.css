@@ -20,7 +20,7 @@ main, .section-main {
 
 footer {
     align-items: center;
-    border-top: 1px solid;
+    border-top: 1px black solid;
     color: #333;
     display: flex;
     justify-content: space-between;
@@ -94,6 +94,9 @@ label.is-invalid {
     margin-bottom: 20px;
     text-align: center;
 }
+.sidebar .active {
+    background-color: #6ca77533;
+}
 .sidebar .logout a {
     color: white;
     text-decoration: none;
@@ -110,6 +113,9 @@ label.is-invalid {
 }
 .sidebar-container {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .sidebar-container header {
     border-bottom: 1px black solid;
@@ -117,4 +123,5 @@ label.is-invalid {
 }
 .section-main {
     padding: 20px;
+    flex: 1;
 }
