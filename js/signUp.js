@@ -107,7 +107,7 @@ $(document).ready(function() {
         $('#registrationForm .is-valid').removeClass('is-valid');
     });
 
-    if (currentHTMLFile === "sing-up.html") {
+    if (currentHTMLFile === "sign-up.html") {
         $('#firstName, #lastName, #birthDate').on('change input', function() {
             updateUsernameField();
         });

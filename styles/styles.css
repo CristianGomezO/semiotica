@@ -1,3 +1,18 @@
+:root {
+    --font-color: #ffffff;
+    --background-color: #000;
+    --border-color: #fff;
+    --section-main-background-color: #000;
+    --font-size: 16px;
+}
+
+[theme="light"] {
+    --font-color: #000;
+    --background-color: #fff;
+    --border-color: #000;
+    --section-main-background-color: #6ca77533;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,23 +20,34 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: var(--font-size);
+}
+
+body a, h1, h2, h3, p, span, li, strong, small {
+    color: var(--font-color) !important;
+    font-size: var(--font-size) !important;
+}
+
+header, footer {
+    background-color: var(--background-color) !important;
+    border-bottom: 1px var(--border-color) solid !important;
+    border-top: 1px var(--border-color) solid !important;
 }
 
 header h1 {
     font-size: 1.5rem;
     margin: 0;
-    color: black; 
     text-transform: uppercase; 
 }
 
 main, .section-main {
-    background-color: #6ca77533;
+    background-color: var(--section-main-background-color);
 }
 
 footer {
     align-items: center;
-    border-top: 1px black solid;
-    color: #333;
+    background-color: var(--background-color);
+    border-top: 1px var(--border-color) solid;
     display: flex;
     justify-content: space-between;
     padding: 10px 60px;
@@ -46,7 +72,7 @@ textarea.is-invalid {
 }
 
 label.is-invalid {
-    color: #dc3545;
+    color: #dc3545 !important;
     font-size: 0.875rem;
     margin-top: 5px;
     display: block;
@@ -54,17 +80,17 @@ label.is-invalid {
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: white;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    border: 1px black solid;
+    border: 1px var(--border-color) solid;
 }
 .sidebar .profile {
     text-align: center;
     margin-top: 20px;
-    border-bottom: 1px black solid;
+    border-bottom: 1px var(--border-color) solid;
 }
 .sidebar .profile img {
     width: 100px;
@@ -82,7 +108,6 @@ label.is-invalid {
 }
 .sidebar nav a {
     display: block;
-    color: black;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -118,7 +143,7 @@ label.is-invalid {
     height: 100vh;
 }
 .sidebar-container header {
-    border-bottom: 1px black solid;
+    border-bottom: 1px var(--border-color) solid;
     justify-content: center;
 }
 .section-main {

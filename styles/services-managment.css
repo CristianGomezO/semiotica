@@ -22,3 +22,11 @@
 .classification-stars input[type = "radio"]:checked ~ label{
     color:orange;
 }
+
+.card-body {
+    background-color: var(--background-color);
+}
+
+.card-body .card-title small {
+    color: var(--font-color) !important;
+}
