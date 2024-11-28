@@ -1,0 +1,27 @@
+.catalog-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.catalog-container .aux-container {
+    width: 70%;
+}
+
+.text-area {
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 14px;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+}
+
+.card p, .card h5 {
+    color: var(--font-color) !important;
+}

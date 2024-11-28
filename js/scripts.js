@@ -1,8 +1,10 @@
 const user = JSON.parse(sessionStorage.getItem('user'));
 $(document).ready(function() {
-    $('#usernameSidebar').text(user.username);
-    if (user.perfilImageChecked) {
-        $('#userImage').attr('src', `assets/images/user-${user.perfilImageChecked}.png`);
+    if (user) {
+        $('#usernameSidebar').text(user.username);
+        if (user.perfilImageChecked) {
+            $('#userImage').attr('src', `assets/images/user-${user.perfilImageChecked}.png`);
+        }
     }
 
     const theme = localStorage.getItem('theme'), 
@@ -10,7 +12,10 @@ $(document).ready(function() {
     document.documentElement.setAttribute('theme', theme);
 
     let logoSrc = "logo.png";
-    if (theme === "dark") {
+
+    if (!theme) {
+        document.documentElement.setAttribute('theme', 'light');
+    }else if (theme === "dark") {
         logoSrc = "logo-inverted.png";
     }
     $(".logo-container img").attr("src", 'assets/images/' + logoSrc);

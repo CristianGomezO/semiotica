@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Servicios</title>
+    <!-- Meta Tags Requeridos -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/landing.css" />
+    <link rel="stylesheet" href="styles/catalog.css" />
+    <link rel="stylesheet" href="styles/services-managment.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img id="userImage" alt="Foto de perfil">
+            <h3 id="usernameSidebar"></h3>
+        </div>
+        <nav>
+            <a href="catalog.html" class="active">Catálogo</a>
+            <a href="licenses.html">Licencias</a>
+            <a href="profile.html">Perfil</a>
+            <a href="settings.html">Configuración</a>
+            <a href="docs-and-help.html">Ayudas y documentación</a>
+            <a href="about-us.html">Acerca de nosotros</a>
+        </nav>
+        <div class="logout">
+            <a href="login.html" onclick="onLogout()">Cerrar sesión</a>
+        </div>
+    </div>
+
+    <main class="sidebar-container">
+        <header>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Servicios" class="logo-image" />
+            </div>
+        </header>
+
+        <section class="section-main">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="assets/images/corte1.png" class="card-img-top" alt="Corte 1">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fw-bold">Corte clásico</h5>
+                                <p class="card-text text-center">10.000$ COP</p>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#commentModal" data-cut="Corte clásico">Comentar corte</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="assets/images/corte2.png" class="card-img-top" alt="Corte 2">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fw-bold">Corte de cabello largo</h5>
+                                <p class="card-text text-center">15.000$ COP</p>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#commentModal" data-cut="Corte de cabello largo">Comentar corte</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="assets/images/corte3.png" class="card-img-top" alt="Corte 3">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fw-bold">Corte fade</h5>
+                                <p class="card-text text-center">20.000$ COP</p>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#commentModal" data-cut="Corte fade">Comentar corte</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="commentModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Pagar servicios</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="checkoutFormContainer">
+                                        <div class="row g-3">
+                                            <div class="col-md-12">
+                                                <label for="typeOfCut" class="form-label">Corte</label>
+                                                <input type="text" class="form-control" id="typeOfCut" name="typeOfCut" readonly>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label for="comment" class="form-label">Comentario</label>
+                                                <textarea class="text-area" id="comments" name="comments" rows="4" cols="50" placeholder="Escribe aquí tus comentarios..."></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="fullName" class="form-label">Calificación</label>
+                                                <p class="classification-stars text-center">
+                                                    <input id="radioStar11" type="radio" name="stars1" value="5">
+                                                    <label for="radioStar11">★</label>
+                                                    <input id="radioStar12" type="radio" name="stars1" value="4">
+                                                    <label for="radioStar12">★</label>
+                                                    <input id="radioStar13" type="radio" name="stars1" value="3">
+                                                    <label for="radioStar13">★</label>
+                                                    <input id="radioStar14" type="radio" name="stars1" value="2">
+                                                    <label for="radioStar14">★</label>
+                                                    <input id="radioStar15" type="radio" name="stars1" value="1">
+                                                    <label for="radioStar15">★</label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" onclick="addCommentToTable()">Guardar comentario</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="display-6 text-center mb-4 mt-5 fw-bold">COMENTARIOS SOBRE CORTES</h2>
+                <div class="table-responsive">
+                    <table class="table text-center table-striped" id="servicesTable">
+                        <thead>
+                            <tr>
+                                <th>Corte</th>
+                                <th>Comentario</th>
+                                <th>Calificación</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+            </div>
+            <div class="middle-footer">
+                <span class="title">Dirección</span>
+                <span>Cra. 55 #27a-42 Bello, Cabañas</span>
+            </div>
+            <div class="middle-footer">
+                <span class="title">Contáctenos</span>
+                <span>laesquina@gmail.com</span>
+                <span>+57 3001234567</span>
+            </div>
+            <div class="right-footer">
+                <span class="title">Redes sociales</span>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="assets/images/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/instagram.png" alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

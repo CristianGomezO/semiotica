@@ -16,9 +16,7 @@ $(document).ready(() => {
         required: true,
       },
       creditCardNumber: {
-        required: true /* 
-        creditcard: true,
-        pattern: /^\d{4}-\d{4}-\d{4}-\d{4}$/, */,
+        required: true
       },
       securityCode: {
         required: true,
@@ -70,6 +68,13 @@ $(document).ready(() => {
     $("#checkoutFormContainer").removeAttr("hidden");
     $("#fullName").val(`${user.firstName} ${user.lastName}`);
   });
+
+  $('#creditCardNumber').on('input', function () {
+    let value = $(this).val();
+    value = value.replace(/\D/g, '');
+    value = value.match(/.{1,4}/g)?.join('-') || '';
+    $(this).val(value);
+});
 });
 
 const buildStarsElement = (starsIndex) => {
@@ -121,7 +126,7 @@ const addPlanToTable = (planName, serviceCost, starsIndex) => {
     $("#total").text(total);
 
     if (total > 0) {
-    $("#payServices").removeAttr("hidden");
+      $("#payServices").removeAttr("hidden");
     } 
   }
 };
